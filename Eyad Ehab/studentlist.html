@@ -1,0 +1,77 @@
+<html>
+    <head><title>student list</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            var arr=[['20192944','eyad','FCIT','icon.png'],['20182245','ehab','FCIT','icon.png'],['20159424','ahmed','FCIT','icon.png'],['20168561','ezzat','FCIT','icon.png']]
+            </script>
+    </head>
+
+    <body onload="init();"></body>>
+        <nav>
+            <ul>
+                <li ><a href="index.html"  >Home</a></li>
+                <li ><a href="studentlist.html"class="active" >Student List</a></li>
+                <li ><a href="new_student.html" >New Student List</a></li>
+        
+                <li class="nav-right"><a href="sign.html">Logout</a></li>
+            </ul>
+        
+        
+        <nav>
+<hr/>
+<section>
+    <div class="searchbar">
+        <input type= "search" class="SearchBox">
+    </div>
+    <div id="mytable"> </div>
+
+    <script>
+        function init(){
+            var count=0;
+            var mytable='';
+            mytable+=' <table border="2">';
+            mytable+='<thead>'+'<tr>'+
+                   ' <td>ID</td>'+
+                    '<td>Name</td>'+
+                    '<td>Faculty</td>'+
+                    '<td>image</td>'+
+                '</tr>'+
+            '</thead>'+
+            '<tbody>';
+            for(let i=0;i<arr.length;i++){
+                var studentID=arr[i][0];
+                var studentName=arr[i][1];
+                var studentfaculty=arr[i][2];
+                var studentImage=arr[i][3];
+
+                mytable+='<tr><td>'+studentID+'</td>'+
+                         '<td>'+studentName+'</td>'+
+                         '<td>'+studentfaculty+'</td>'+
+                         '<td>'+'<img src="Images//'+studentImage+'" alt="Image of'+studentName+'" width="30px" height="30px">'+'</td></tr>';
+                    count++;
+
+            }
+            mytable+='</tbody>';
+            mytable+='<tfoot><tr><td colspan="4">Total number of students:'+count+'</td> </tr></tfoot></table>';
+
+                document.getElementById("mytable").innerHTML= mytable;
+
+
+        }
+    </script>
+
+    <!--footer-->
+    Copyrights &copy; <a href="https://www.fue.edu.eg/" target="_blank">Future University in Egypt</a> &nbsp; &mdash;&nbsp; 
+    <a href="mailto:nada.hussien@fue.edu.eg">Contact us</a>
+    <!--#footer-->
+</body>
+
+</html>
+    console.log(input);
+}
+</script>
+</body>
+<footer>
+
+</footer>
+</html>
